@@ -1,0 +1,260 @@
+
+/* ----------------------------------------------------------------
+
+	shop.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Shop
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for shop pages. Thanks!
+-----------------------------------------------------------------*/
+
+/* category
+-----------------------------------------------------------------*/
+.category {
+	position: relative;
+	margin-bottom: 0.875rem;
+
+	.category-image {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.category-details {
+		position: absolute;
+		bottom: 1rem;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.category-title {
+		font-weight: 700;
+		font-size: 1rem;
+	}
+
+	.category-info {
+		font-weight: 300;
+		font-size: 0.875rem;
+		color: #bcbbb9;
+	}
+
+	.category-btn {
+		position: absolute;
+		bottom: 5rem;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		a {
+			padding: 0.5rem 0.8rem;
+			background-color: $theme-color;
+			border-radius: 50%;
+			font-size: 1.25rem;
+			color: $white;
+		}
+	}
+}
+
+.category-menu {
+	ul {
+		li {
+			a {
+				font-family: $heading-font;
+				font-weight: 600;
+				font-size: 0.875rem;
+				color: $dark;
+			}
+
+			span {
+				font-weight: 300;
+				font-size: 0.875rem;
+				color: #b2b2b2;
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}
+
+
+/* Product
+-----------------------------------------------------------------*/
+.product {
+	position: relative;
+	margin-bottom: 3.25rem;
+
+	.product-image {
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 1rem;
+		}
+	}
+
+	.product-details {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 1rem;
+		z-index: 1;
+	}
+
+	.product-price {
+		font-family: $heading-font;
+		font-weight: 700;
+		font-size: 1.125rem;
+	
+		del {
+			font-weight: 300;
+			font-size: 1rem;
+			color: #b2b2b2;
+			margin-right: 0.25rem;
+		}
+	}
+
+	.product-title {
+		font-weight: 700;
+		font-size: 1.125rem;
+	}
+
+	.product-category {
+		font-weight: 300;
+		font-size: 0.875rem;
+		line-height: 1;
+
+		a {
+			color: #b2b2b2;
+		}
+	}
+
+	.product-rating {
+		line-height: 1;
+		font-size: 0.875rem;
+		color: #b3b2b0;
+
+		i {
+			color: #ff893f;
+			font-size: 0.65rem;
+
+			&.empty {
+				color: rgba(#ff893f, 0.5);
+			}
+		}
+	}
+
+	.product-btns {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+
+		@include transition(all 0.5s ease-in-out);
+	}
+
+	.add-to-cart, .add-to-wishlist {
+		position: absolute;
+		right: 1rem;
+		font-size: 1.25rem;
+	}	
+
+	.add-to-cart {
+		color: $dark;
+		top: 4rem;
+	}
+
+	.add-to-wishlist {
+		color: #d7d7d7;
+		top: 1.25rem;
+	}
+
+	&:hover {
+		.product-btns {
+			opacity: 1;
+		}
+	}
+}
+
+.ontop, .onbest, .onsale, .onnew {
+	font-family: $heading-font;
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 0.4rem 1rem;
+	line-height: 1;
+	color: $white; 	
+	position: absolute;
+	top: 5.5rem;
+	left: 0;
+	text-transform: uppercase;
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	background-color: #e14924;
+}
+
+.onprice {
+	font-family: $heading-font;
+	font-size: 3.75rem;
+	font-weight: 700;
+	color: $white;
+	position: absolute;
+	top: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.ads {
+    position: relative;
+    display: block;
+	margin-bottom: 1.5rem;
+
+    .ads-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .ads-bg-img {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+			border-radius: 1rem;;
+        }
+    }
+
+    .ads-body {
+        position: relative;
+        z-index: 1;
+    }
+
+	&.ads1 {
+		.ads-bg {
+			position: relative;
+			height: 11rem;
+		}
+	}
+
+	&.ads2 {
+		padding: 4rem;
+	}
+}

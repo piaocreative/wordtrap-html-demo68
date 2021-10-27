@@ -1,0 +1,40 @@
+/* ----------------------------------------------------------------
+	Extra Styles
+-----------------------------------------------------------------*/
+.container-fluid {
+	overflow: hidden;
+}
+
+.input-group-append {
+	margin-left: -1rem;
+}
+
+.slick-slide {
+	margin-right: 1rem;
+	height: auto;
+}
+
+.about-banner {
+	@include media-breakpoint-up(lg)
+	{
+		position: absolute;
+
+		img {
+		   max-width: 30rem;
+		}
+	}	
+}
+
+#map {
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+
+		img {
+			height: 100%;
+			max-width: calc(50vw - 10rem);
+		}
+	}
+}
